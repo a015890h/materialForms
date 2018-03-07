@@ -23,5 +23,10 @@ if ($conn->query($sql) === TRUE){
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
+echo '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">'
+echo '<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>'
+echo '<link href="css/myStylesheet.css" type="text/css" rel="stylesheet"/>'
+echo '<div class="card-panel teal lighten-2">Go back</div>'
+
 $conn->close();
 ?>
