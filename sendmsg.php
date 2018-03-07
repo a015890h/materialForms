@@ -15,7 +15,7 @@ if ($conn->connect_error){
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSET INTO contactUs (firstName, lastName, email, message) VALUES ('$firstName', '$lastName', '$email', '$message')";
+$sql = "INSERT INTO contactUs (firstName, lastName, email, message) VALUES ('$firstName', '$lastName', '$email', '$message')";
 
 if ($conn->query($sql) === TRUE){
     echo "New record created successfuly";
