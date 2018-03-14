@@ -49,6 +49,7 @@
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
+                    echo '<table class="highlight"><thead><tr><th>Name</th><th>Email</th><th>Message</th></tr></thead>';
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
                         echo "<tbody><tr><td>".$row["firstName"]." ".$row["lastName"]."</td><td>".$row["email"]."</td><td>".$row["message"]."</td></tr></tbody>";
