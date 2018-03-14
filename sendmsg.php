@@ -18,7 +18,7 @@ if ($conn->connect_error){
 $sql = "INSERT INTO contactUs (firstName, lastName, email, message) VALUES ('$firstName', '$lastName', '$email', '$message')";
 
 if ($conn->query($sql) === TRUE){
-    echo header ('Location: http://www.google.co.uk');
+    echo header ('Location: confirm.html');
 } else{
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
