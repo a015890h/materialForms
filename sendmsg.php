@@ -18,7 +18,7 @@ if ($conn->connect_error){
 $sql = "INSERT INTO contactUs (firstName, lastName, email, message) VALUES ('$firstName', '$lastName', '$email', '$message')";
 
 if ($conn->query($sql) === TRUE){
-    echo "New record created successfuly";
+    echo header ('Location: http://www.google.co.uk');
 } else{
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
