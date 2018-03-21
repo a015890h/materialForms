@@ -8,6 +8,7 @@ $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
 $email = $_POST['email'];
 $message = $_POST['message'];
+$colour = $_POST['colour'];
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -15,7 +16,7 @@ if ($conn->connect_error){
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO contactUs (firstName, lastName, email, message) VALUES ('$firstName', '$lastName', '$email', '$message')";
+$sql = "INSERT INTO contactUs (firstName, lastName, email, message, colour) VALUES ('$firstName', '$lastName', '$email', '$message', '$colour')";
 
 if ($conn->query($sql) === TRUE){
     echo header ('Location: confirm.html');

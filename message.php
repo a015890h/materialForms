@@ -45,14 +45,14 @@
                     die("Connection failed: " . $conn->connect_error);
                 } 
 
-                $sql = "SELECT firstName, lastName, email, message FROM contactUs";
+                $sql = "SELECT firstName, lastName, email, message, colour FROM contactUs";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
-                    echo '<table class="highlight"><thead><tr><th>Name</th><th>Email</th><th>Message</th></tr></thead>';
+                    echo '<table class="highlight"><thead><tr><th>Name</th><th>Email</th><th>Message</th><th>Colour</th></tr></thead>';
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
-                        echo "<tbody><tr><td>".$row["firstName"]." ".$row["lastName"]."</td><td>".$row["email"]."</td><td>".$row["message"]."</td></tr></tbody>";
+                        echo "<tbody><tr><td>".$row["firstName"]." ".$row["lastName"]."</td><td>".$row["email"]."</td><td>".$row["message"]."</td><td>".$row["colour"]."</td></tr></tbody>";
                     }
                     echo "</table>";
                 } else {
